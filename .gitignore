@@ -41,3 +41,5 @@ chroma_db/
 /csv
 *.png
 *.jpg
+
+/public
