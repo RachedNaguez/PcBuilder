@@ -1,0 +1,41 @@
+# General
+.DS_Store
+*.swp
+*.swo
+tmp/
+temp/
+*.log
+
+# Node.js
+node_modules/
+dist/
+build/
+.parcel-cache/
+.cache/
+.pnpm/
+.yarn/
+.bun/
+bun.lockb
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+venv/
+env/
+*.sqlite3
+
+# VSCode
+.vscode/
+
+# ChromaDB
+chroma_db/
+
+# Environment files
+.env
+.env.local
+
+/csv

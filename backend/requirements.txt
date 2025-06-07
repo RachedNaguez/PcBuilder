@@ -1,0 +1,8 @@
+fastapi
+pydantic
+pandas
+langchain
+langchain-groq
+chromadb
+sentence-transformers
+python-dotenv
