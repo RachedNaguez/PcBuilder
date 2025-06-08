@@ -14,15 +14,30 @@ export interface ChatRequestPayload {
   mode?: string;
 }
 
+export interface BuildComponent {
+  name: string;
+  type: string;
+  price: number;
+  specs: Record<string, string>;
+}
+
+export interface BuildData {
+  components: Record<string, BuildComponent> | BuildComponent[];
+  total_price: number;
+  requested_budget?: number;
+}
+
 export interface ChatResponseData {
   content: string;
   type: string; // e.g., "text", "build", "component_added", etc.
-  data?: Record<string, any> | null; // Adjust 'any' to more specific types if known
+  data?: BuildData | null;
   session_id: string;
 }
 
 export const chatService = {
-  sendMessage: async (payload: ChatRequestPayload): Promise<ChatResponseData> => {
+  sendMessage: async (
+    payload: ChatRequestPayload
+  ): Promise<ChatResponseData> => {
     const response = await api.post<ChatResponseData>("/chat/message", payload);
     return response.data;
   },
